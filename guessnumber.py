@@ -1,9 +1,14 @@
 import random
 
-r = random.randint(1, 10)
-y = 0
+s = input('你最小要猜多少? ')
+e = input('你最大要猜多少? ')
+s = int(s)
+e = int(e)
+
+r = random.randint(s, e)
+num = 0
 while True:
-	y = y + 1
+	num = num + 1
 	gus = input('請猜數字: ')
 	gus = int(gus)
 	if gus == r :
@@ -15,4 +20,4 @@ while True:
 			print('太小了')
 
 print('猜對了! 遊戲結束')
-print('你總共猜了',y,'次')
+print('你總共猜了',num,'次')
